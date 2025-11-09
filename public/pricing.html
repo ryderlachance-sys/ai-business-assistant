@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - AI Business Assistant</title>
+    <meta name="description" content="Choose the perfect plan for your business. Start free and scale as you grow with our AI Business Assistant.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🤖</div>
+                <span class="logo-text">AI Business Assistant</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/register" class="nav-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">💰</span>
+                    <span>Transparent Pricing</span>
+                </div>
+                <h1 class="hero-title">
+                    Choose Your Perfect 
+                    <span class="gradient-text">Business Plan</span>
+                </h1>
+                <p class="hero-description">
+                    Start free and scale as you grow. All plans include our core AI features 
+                    with no hidden fees or long-term contracts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Pricing</div>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-description">
+                    Choose the plan that fits your business needs. Upgrade or downgrade anytime.
+                </p>
+            </div>
+            
+            <!-- Billing Toggle -->
+            <div class="billing-toggle">
+                <span class="billing-label">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="billing-label">Annual <span class="discount-badge">Save 20%</span></span>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <p class="pricing-description">Perfect for solopreneurs and small teams</p>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount monthly">29</span>
+                            <span class="price-amount annual" style="display: none;">23</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <div class="annual-savings" style="display: none;">
+                            <span class="savings-text">Save $72/year</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>100 automated emails/month</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Basic scheduling</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>1 business integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Email support</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Basic analytics</span>
+                        </div>
+                    </div>
+                    <a href="/register?plan=starter" class="pricing-button">Start Free Trial</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <p class="pricing-description">Ideal for growing businesses</p>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount monthly">59</span>
+                            <span class="price-amount annual" style="display: none;">47</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <div class="annual-savings" style="display: none;">
+                            <span class="savings-text">Save $144/year</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>500 automated emails/month</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Advanced scheduling</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>5 business integrations</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Priority support</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Advanced analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Custom email templates</span>
+                        </div>
+                    </div>
+                    <a href="/register?plan=professional" class="pricing-button">Start Free Trial</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Business</h3>
+                        <p class="pricing-description">For established businesses</p>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount monthly">99</span>
+                            <span class="price-amount annual" style="display: none;">79</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <div class="annual-savings" style="display: none;">
+                            <span class="savings-text">Save $240/year</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Unlimited automated emails</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Full scheduling suite</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Unlimited integrations</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Phone support</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Custom analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>White-label options</span>
+                        </div>
+                    </div>
+                    <a href="/register?plan=business" class="pricing-button">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Everything you need to know about our pricing and plans.
+                </p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I change my plan anytime?</h3>
+                    <p class="faq-answer">Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Is there a free trial?</h3>
+                    <p class="faq-answer">Absolutely! All plans come with a 14-day free trial. No credit card required to get started.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What happens if I exceed my email limit?</h3>
+                    <p class="faq-answer">We'll notify you when you're approaching your limit. You can upgrade your plan or purchase additional email credits as needed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer refunds?</h3>
+                    <p class="faq-answer">Yes, we offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your payment in full.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I cancel anytime?</h3>
+                    <p class="faq-answer">Yes, you can cancel your subscription at any time. Your account will remain active until the end of your current billing period.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer enterprise plans?</h3>
+                    <p class="faq-answer">Yes! Contact our sales team for custom enterprise solutions with dedicated support and advanced features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Automate Your Business?</h2>
+                <p class="cta-description">
+                    Join thousands of business owners who are already saving 10+ hours per week with our AI assistant.
+                </p>
+                <div class="cta-actions">
+                    <a href="/register" class="btn btn-primary btn-large">
+                        <span>Start Your Free Trial</span>
+                        <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <div class="cta-guarantee">
+                        <svg class="guarantee-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>14-day free trial • No credit card required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🤖</div>
+                        <span class="logo-text">AI Business Assistant</span>
+                    </div>
+                    <p class="footer-description">
+                        Automate your business operations with AI. Save time, increase productivity, and focus on what matters most.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 AI Business Assistant. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Billing toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const billingToggle = document.getElementById('billingToggle');
+            const monthlyPrices = document.querySelectorAll('.price-amount.monthly');
+            const annualPrices = document.querySelectorAll('.price-amount.annual');
+            const annualSavings = document.querySelectorAll('.annual-savings');
+            
+            billingToggle.addEventListener('change', function() {
+                const isAnnual = this.checked;
+                
+                monthlyPrices.forEach(price => {
+                    price.style.display = isAnnual ? 'none' : 'inline';
+                });
+                
+                annualPrices.forEach(price => {
+                    price.style.display = isAnnual ? 'inline' : 'none';
+                });
+                
+                annualSavings.forEach(savings => {
+                    savings.style.display = isAnnual ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+    
+    <style>
+        /* Additional pricing-specific styles */
+        .billing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .billing-label {
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+        
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--gray-300);
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .toggle-slider {
+            background-color: var(--primary-600);
+        }
+        
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+        
+        .discount-badge {
+            background: var(--success-500);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .annual-savings {
+            margin-top: 0.5rem;
+        }
+        
+        .savings-text {
+            color: var(--success-500);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .faq {
+            padding: var(--space-24) 0;
+            background: white;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .faq-item {
+            background: var(--gray-50);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+        }
+        
+        .faq-question {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-3);
+        }
+        
+        .faq-answer {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
+
+
+
+
+
+
+

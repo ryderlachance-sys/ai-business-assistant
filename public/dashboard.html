@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Business Assistant</title>
+    <meta name="description" content="Manage your business automation, emails, scheduling, and analytics from your AI Business Assistant dashboard.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🤖</div>
+                <span class="logo-text">AI Business Assistant</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/pricing" class="nav-link">Pricing</a>
+                <div class="user-menu">
+                    <div class="user-avatar">👤</div>
+                    <span class="user-name">John Doe</span>
+                    <div class="user-dropdown">
+                        <a href="#" class="dropdown-item" data-action="profile">Profile</a>
+                        <a href="#" class="dropdown-item" data-action="settings">Settings</a>
+                        <a href="#" class="dropdown-item" data-action="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Overview</span>
+                </a>
+                <a href="#email" class="nav-item">
+                    <span class="nav-icon">📧</span>
+                    <span class="nav-text">Email Automation</span>
+                </a>
+                <a href="#schedule" class="nav-item">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-text">Scheduling</span>
+                </a>
+                <a href="#analytics" class="nav-item">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Analytics</span>
+                </a>
+                <a href="#integrations" class="nav-item">
+                    <span class="nav-icon">🔗</span>
+                    <span class="nav-text">Integrations</span>
+                </a>
+                <a href="#settings" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h1 class="section-title">Dashboard Overview</h1>
+                    <p class="section-description">Welcome back! Here's what's happening with your business automation.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📧</div>
+                        <div class="stat-content">
+                            <div class="stat-number">247</div>
+                            <div class="stat-label">Emails Processed</div>
+                            <div class="stat-change positive">+12% this week</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-content">
+                            <div class="stat-number">8.5</div>
+                            <div class="stat-label">Hours Saved</div>
+                            <div class="stat-change positive">+2.3h this week</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-content">
+                            <div class="stat-number">23</div>
+                            <div class="stat-label">Meetings Scheduled</div>
+                            <div class="stat-change positive">+5 this week</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <div class="stat-number">94%</div>
+                            <div class="stat-label">Automation Rate</div>
+                            <div class="stat-change positive">+3% this week</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <h2 class="section-subtitle">Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">📧</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Email auto-responded to customer inquiry</div>
+                                <div class="activity-time">2 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Meeting scheduled with Sarah Johnson</div>
+                                <div class="activity-time">15 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📊</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Weekly analytics report generated</div>
+                                <div class="activity-time">1 hour ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🔗</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Google Calendar integration updated</div>
+                                <div class="activity-time">2 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Email Automation Section -->
+            <section id="email" class="dashboard-section">
+                <div class="section-header">
+                    <h1 class="section-title">Email Automation</h1>
+                    <p class="section-description">Manage your email automation rules and responses.</p>
+                </div>
+
+                <div class="email-controls">
+                    <button class="btn btn-primary" data-action="add-rule">
+                        <span class="btn-icon">➕</span>
+                        Add New Rule
+                    </button>
+                    <button class="btn btn-secondary" data-action="view-analytics">
+                        <span class="btn-icon">📊</span>
+                        View Analytics
+                    </button>
+                </div>
+
+                <div class="email-rules">
+                    <div class="rule-card">
+                        <div class="rule-header">
+                            <h3 class="rule-title">Customer Support Auto-Response</h3>
+                            <div class="rule-status active">Active</div>
+                        </div>
+                        <p class="rule-description">Automatically responds to common customer support questions with helpful information.</p>
+                        <div class="rule-stats">
+                            <div class="rule-stat">
+                                <span class="stat-label">Responses Sent:</span>
+                                <span class="stat-value">156</span>
+                            </div>
+                            <div class="rule-stat">
+                                <span class="stat-label">Success Rate:</span>
+                                <span class="stat-value">94%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-header">
+                            <h3 class="rule-title">Meeting Confirmation</h3>
+                            <div class="rule-status active">Active</div>
+                        </div>
+                        <p class="rule-description">Sends automatic confirmation emails when meetings are scheduled.</p>
+                        <div class="rule-stats">
+                            <div class="rule-stat">
+                                <span class="stat-label">Confirmations Sent:</span>
+                                <span class="stat-value">89</span>
+                            </div>
+                            <div class="rule-stat">
+                                <span class="stat-label">Success Rate:</span>
+                                <span class="stat-value">98%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scheduling Section -->
+            <section id="schedule" class="dashboard-section">
+                <div class="section-header">
+                    <h1 class="section-title">Smart Scheduling</h1>
+                    <p class="section-description">Manage your calendar and meeting preferences.</p>
+                </div>
+
+                <div class="schedule-controls">
+                    <button class="btn btn-primary" data-action="schedule-meeting">
+                        <span class="btn-icon">📅</span>
+                        Schedule Meeting
+                    </button>
+                    <button class="btn btn-secondary" data-action="preferences">
+                        <span class="btn-icon">⚙️</span>
+                        Preferences
+                    </button>
+                </div>
+
+                <div class="calendar-widget">
+                    <div class="calendar-header">
+                        <h3>Upcoming Meetings</h3>
+                        <div class="calendar-nav">
+                            <button class="nav-btn">‹</button>
+                            <span class="current-month">October 2024</span>
+                            <button class="nav-btn">›</button>
+                        </div>
+                    </div>
+                    <div class="meetings-list">
+                        <div class="meeting-item">
+                            <div class="meeting-time">10:00 AM</div>
+                            <div class="meeting-details">
+                                <div class="meeting-title">Client Call - Project Review</div>
+                                <div class="meeting-participants">with Sarah Johnson</div>
+                            </div>
+                        </div>
+                        <div class="meeting-item">
+                            <div class="meeting-time">2:00 PM</div>
+                            <div class="meeting-details">
+                                <div class="meeting-title">Team Standup</div>
+                                <div class="meeting-participants">with Development Team</div>
+                            </div>
+                        </div>
+                        <div class="meeting-item">
+                            <div class="meeting-time">4:30 PM</div>
+                            <div class="meeting-details">
+                                <div class="meeting-title">Strategy Planning</div>
+                                <div class="meeting-participants">with Management Team</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="dashboard-section">
+                <div class="section-header">
+                    <h1 class="section-title">Business Analytics</h1>
+                    <p class="section-description">Track your productivity and automation performance.</p>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="chart-card">
+                        <h3 class="chart-title">Time Saved This Week</h3>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 85%"></div>
+                                <div class="bar" style="height: 95%"></div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <h3 class="chart-title">Email Automation Performance</h3>
+                        <div class="chart-placeholder">
+                            <div class="pie-chart">
+                                <div class="pie-slice" style="--percentage: 70; --color: #3b82f6;"></div>
+                                <div class="pie-slice" style="--percentage: 20; --color: #10b981;"></div>
+                                <div class="pie-slice" style="--percentage: 10; --color: #f59e0b;"></div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #3b82f6;"></div>
+                                    <span>Automated (70%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #10b981;"></div>
+                                    <span>Manual (20%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #f59e0b;"></div>
+                                    <span>Pending (10%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Integrations Section -->
+            <section id="integrations" class="dashboard-section">
+                <div class="section-header">
+                    <h1 class="section-title">Integrations</h1>
+                    <p class="section-description">Connect your favorite business tools and services.</p>
+                </div>
+
+                <div class="integrations-grid">
+                    <div class="integration-card" data-integration="gmail">
+                        <div class="integration-icon">📧</div>
+                        <h3 class="integration-title">Gmail</h3>
+                        <p class="integration-description">Connect your Gmail account for email automation.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="google-calendar">
+                        <div class="integration-icon">📅</div>
+                        <h3 class="integration-title">Google Calendar</h3>
+                        <p class="integration-description">Sync your calendar for smart scheduling.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="slack">
+                        <div class="integration-icon">💬</div>
+                        <h3 class="integration-title">Slack</h3>
+                        <p class="integration-description">Get notifications and updates in Slack.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="salesforce">
+                        <div class="integration-icon">📊</div>
+                        <h3 class="integration-title">Salesforce</h3>
+                        <p class="integration-description">Sync customer data and interactions.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="microsoft-teams">
+                        <div class="integration-icon">👥</div>
+                        <h3 class="integration-title">Microsoft Teams</h3>
+                        <p class="integration-description">Integrate with Teams for meetings and notifications.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="outlook">
+                        <div class="integration-icon">📮</div>
+                        <h3 class="integration-title">Outlook</h3>
+                        <p class="integration-description">Connect Outlook for email and calendar sync.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="hubspot">
+                        <div class="integration-icon">🎯</div>
+                        <h3 class="integration-title">HubSpot</h3>
+                        <p class="integration-description">Sync leads and automate marketing workflows.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="zapier">
+                        <div class="integration-icon">⚡</div>
+                        <h3 class="integration-title">Zapier</h3>
+                        <p class="integration-description">Connect 5000+ apps through Zapier automation.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="trello">
+                        <div class="integration-icon">📋</div>
+                        <h3 class="integration-title">Trello</h3>
+                        <p class="integration-description">Sync tasks and project management.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="asana">
+                        <div class="integration-icon">✅</div>
+                        <h3 class="integration-title">Asana</h3>
+                        <p class="integration-description">Manage projects and track team progress.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="notion">
+                        <div class="integration-icon">📝</div>
+                        <h3 class="integration-title">Notion</h3>
+                        <p class="integration-description">Sync notes, docs, and knowledge base.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+
+                    <div class="integration-card" data-integration="github">
+                        <div class="integration-icon">🐙</div>
+                        <h3 class="integration-title">GitHub</h3>
+                        <p class="integration-description">Track code commits and project updates.</p>
+                        <div class="integration-status disconnected">Not Connected</div>
+                        <button class="btn btn-primary integration-connect-btn">Connect</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="dashboard-section">
+                <div class="section-header">
+                    <h1 class="section-title">Settings</h1>
+                    <p class="section-description">Manage your account and automation preferences.</p>
+                </div>
+
+                <div class="settings-sections">
+                    <div class="settings-section">
+                        <h3 class="settings-title">Account Settings</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" value="John Doe" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="john@example.com" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" value="Acme Corp" class="form-input">
+                            </div>
+                            <button class="btn btn-primary" data-action="save-changes">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-title">Automation Preferences</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">Enable email automation</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-text">Enable smart scheduling</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-text">Send weekly reports</span>
+                                </label>
+                            </div>
+                            <button class="btn btn-primary" data-action="save-preferences">Save Preferences</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+
