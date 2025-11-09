@@ -336,6 +336,41 @@ app.get('/auth/:service/callback', async (req, res) => {
   }
 });
 
+// Integration configuration status endpoint
+app.get('/api/integrations/:service/status', (req, res) => {
+  const service = req.params.service;
+  const integration = integrations[service];
+
+  if (!integration) {
+    return res.status(404).json({
+      service,
+      setupRequired: true,
+      configured: false,
+      message: 'Integration not found'
+    });
+  }
+
+  const hasClientId = Boolean(
+    integration.clientId &&
+    !integration.clientId.toString().includes('your-')
+  );
+
+  const hasClientSecret = integration.clientSecret === undefined
+    ? true
+    : Boolean(
+        integration.clientSecret &&
+        !integration.clientSecret.toString().includes('your-')
+      );
+
+  const configured = hasClientId && hasClientSecret;
+
+  res.json({
+    service,
+    configured,
+    setupRequired: !configured
+  });
+});
+
 // Exchange authorization code for access token
 async function exchangeCodeForToken(integration, code) {
   const axios = require('axios');

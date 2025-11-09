@@ -1115,16 +1115,12 @@ function initializeIntegrationButtons() {
     console.log('Found integration buttons:', integrationBtns.length);
     
     if (integrationBtns.length === 0) {
-        console.error('No integration buttons found!');
-        alert('No integration buttons found! Check if integrations section is visible.');
+        console.error('No integration buttons found! Check if integrations section is visible.');
         return;
     }
     
     integrationBtns.forEach(btn => {
-        console.log('Adding click listener to button:', btn);
         btn.addEventListener('click', (e) => {
-            console.log('Integration button clicked!');
-            alert('Integration button clicked!');
             const card = e.target.closest('.integration-card');
             const integrationId = card.getAttribute('data-integration');
             const integrationName = card.querySelector('.integration-title').textContent;
@@ -1134,7 +1130,6 @@ function initializeIntegrationButtons() {
     });
     
     console.log('Integration buttons initialized successfully');
-    alert('Integration buttons initialized successfully!');
 }
 
 // Integration functions
@@ -1383,7 +1378,7 @@ function getIntegrationInfo(integrationId) {
     };
 }
 
-function authorizeIntegration(integrationId, integrationName) {
+async function authorizeIntegration(integrationId, integrationName) {
     const button = document.querySelector('.btn-primary');
     const btnText = button.querySelector('.btn-text');
     const btnLoading = button.querySelector('.btn-loading');
@@ -1412,33 +1407,28 @@ function authorizeIntegration(integrationId, integrationName) {
     const serviceName = serviceMap[integrationId];
     
     if (serviceName) {
-        // Real OAuth flow
-        showNotification(`Redirecting to ${integrationName} for authorization...`, 'info');
-        
-        // Check if OAuth is configured first
-        fetch(`/auth/${serviceName}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.setupRequired) {
-                    showNotification(`${integrationName} OAuth not configured. Please set up credentials first.`, 'warning');
-                    showOAuthSetupModal(integrationName, data.setupGuide);
-                    // Reset button state
-                    btnText.style.display = 'inline';
-                    btnLoading.style.display = 'none';
-                    button.disabled = false;
-                } else {
-                    // Redirect to OAuth
-                    window.location.href = `/auth/${serviceName}`;
-                }
-            })
-            .catch(error => {
-                console.error('OAuth check error:', error);
-                showNotification(`Error connecting to ${integrationName}. Please try again.`, 'error');
-                // Reset button state
-                btnText.style.display = 'inline';
-                btnLoading.style.display = 'none';
-                button.disabled = false;
-            });
+        showNotification(`Checking ${integrationName} integration status...`, 'info');
+
+        try {
+            const response = await fetch(`/api/integrations/${serviceName}/status`);
+            const data = await response.json();
+
+            if (data.setupRequired) {
+                showNotification(`${integrationName} OAuth not configured. Please set up credentials first.`, 'warning');
+                showOAuthSetupModal(integrationName, getSetupGuideUrl(serviceName));
+            } else {
+                showNotification(`Redirecting to ${integrationName} for authorization...`, 'info');
+                window.location.href = `/auth/${serviceName}`;
+            }
+        } catch (error) {
+            console.error('Integration status error:', error);
+            showNotification(`Error checking ${integrationName} status. Redirecting to OAuth...`, 'warning');
+            window.location.href = `/auth/${serviceName}`;
+        } finally {
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            button.disabled = false;
+        }
     } else {
         // Fallback for unknown integrations
         showNotification(`Connecting to ${integrationName}...`, 'info');
@@ -1449,6 +1439,40 @@ function authorizeIntegration(integrationId, integrationName) {
             updateIntegrationStatus(integrationId, 'connected');
         }, 2000);
     }
+}
+
+function getSetupGuideUrl(serviceName) {
+    const guides = {
+        google: getSetupGuideLink('google'),
+        slack: getSetupGuideLink('slack'),
+        microsoft: getSetupGuideLink('microsoft'),
+        salesforce: getSetupGuideLink('salesforce'),
+        hubspot: getSetupGuideLink('hubspot'),
+        zapier: getSetupGuideLink('zapier'),
+        trello: getSetupGuideLink('trello'),
+        asana: getSetupGuideLink('asana'),
+        notion: getSetupGuideLink('notion'),
+        github: getSetupGuideLink('github')
+    };
+
+    return guides[serviceName] || 'https://example.com/setup-guide';
+}
+
+function getSetupGuideLink(service) {
+    const guideMap = {
+        google: 'https://developers.google.com/identity/protocols/oauth2',
+        slack: 'https://api.slack.com/authentication/oauth-v2',
+        microsoft: 'https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app',
+        salesforce: 'https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm',
+        hubspot: 'https://developers.hubspot.com/docs/api/working-with-oauth',
+        zapier: 'https://zapier.com/developer/',
+        trello: 'https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/',
+        asana: 'https://developers.asana.com/docs/oauth',
+        notion: 'https://developers.notion.com/docs/authorization',
+        github: 'https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app'
+    };
+
+    return guideMap[service] || 'https://example.com/setup-guide';
 }
 
 function showOAuthSetupModal(integrationName, setupGuide) {
