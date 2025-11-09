@@ -1163,7 +1163,7 @@ function showIntegrationModal(integrationId, integrationName) {
             
             <div class="modal-actions">
                 <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="authorizeIntegration('${integrationId}', '${integrationName}')">
+                <button type="button" class="btn btn-primary" onclick="authorizeIntegration('${integrationId}', '${integrationName}', this)">
                     <span class="btn-text">Connect ${integrationName}</span>
                     <span class="btn-loading" style="display: none;">Connecting...</span>
                 </button>
@@ -1378,14 +1378,19 @@ function getIntegrationInfo(integrationId) {
     };
 }
 
-async function authorizeIntegration(integrationId, integrationName) {
-    const button = document.querySelector('.btn-primary');
+async function authorizeIntegration(integrationId, integrationName, buttonElement) {
+    const button = buttonElement || document.querySelector('.btn-primary');
+    if (!button) {
+        console.error('Integration button not found');
+        return;
+    }
+
     const btnText = button.querySelector('.btn-text');
     const btnLoading = button.querySelector('.btn-loading');
     
     // Show loading state
-    btnText.style.display = 'none';
-    btnLoading.style.display = 'inline';
+    if (btnText) btnText.style.display = 'none';
+    if (btnLoading) btnLoading.style.display = 'inline';
     button.disabled = true;
     
     // Map integration IDs to OAuth service names
@@ -1411,7 +1416,11 @@ async function authorizeIntegration(integrationId, integrationName) {
 
         try {
             const response = await fetch(`/api/integrations/${serviceName}/status`);
-            const data = await response.json();
+            let data = { setupRequired: true };
+
+            if (response.ok) {
+                data = await response.json();
+            }
 
             if (data.setupRequired) {
                 showNotification(`${integrationName} OAuth not configured. Please set up credentials first.`, 'warning');
@@ -1425,8 +1434,8 @@ async function authorizeIntegration(integrationId, integrationName) {
             showNotification(`Error checking ${integrationName} status. Redirecting to OAuth...`, 'warning');
             window.location.href = `/auth/${serviceName}`;
         } finally {
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
+            if (btnText) btnText.style.display = 'inline';
+            if (btnLoading) btnLoading.style.display = 'none';
             button.disabled = false;
         }
     } else {
